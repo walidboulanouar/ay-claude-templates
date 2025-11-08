@@ -42,7 +42,8 @@
     "url": "https://github.com/walidboulanouar/ay-claude-templates.git"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "bugs": {
     "url": "https://github.com/walidboulanouar/ay-claude-templates/issues"
