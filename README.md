@@ -2,10 +2,12 @@
 
 [![npm version](https://img.shields.io/npm/v/@ay-claude/cli.svg)](https://www.npmjs.com/package/@ay-claude/cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue.svg)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
 
-> Official CLI tool for AY Claude Platform - Discover, install, and manage Claude Skills, Agents, Commands, Hooks, Plugins, MCPs, and Settings
+> **Official CLI tool for AY Claude Platform** - Discover, install, and manage Claude Skills, Agents, Commands, Hooks, Plugins, MCPs, and Settings. Cross-platform package manager for Claude Code extensions.
 
-## 🚀 Installation
+## 📦 Installation
 
 ```bash
 npm install -g @ay-claude/cli
@@ -19,7 +21,7 @@ ay-claude --version
 ayc --version
 ```
 
-**Package**: [@ay-claude/cli on npm](https://www.npmjs.com/package/@ay-claude/cli)
+**📦 Package**: [@ay-claude/cli on npm](https://www.npmjs.com/package/@ay-claude/cli)
 
 ## ✨ Features
 
