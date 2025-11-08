@@ -1,27 +1,15 @@
 # AY Claude CLI
 
-[![GitHub Package](https://img.shields.io/badge/GitHub-Package-blue)](https://github.com/walidboulanouar/ay-claude-templates/packages)
+[![npm version](https://img.shields.io/npm/v/@ay-claude/cli.svg)](https://www.npmjs.com/package/@ay-claude/cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > Official CLI tool for AY Claude Platform - Discover, install, and manage Claude Skills, Agents, Commands, Hooks, Plugins, MCPs, and Settings
 
 ## 🚀 Installation
 
-### From npmjs.org (Public npm Registry)
-
 ```bash
 npm install -g @ay-claude/cli
 ```
-
-**Note**: The package name on npmjs.org is `@ay-claude/cli`. If this package doesn't exist yet, see [Publishing Guide](./NPMJS_PUBLICATION_GUIDE.md).
-
-### From GitHub Packages
-
-```bash
-npm install -g @walidboulanouar/ay-claude-cli
-```
-
-**Note**: You'll need to authenticate with GitHub Packages first. See [GitHub Packages Setup](#github-packages-setup) below.
 
 After installation, the CLI will be available as `ay-claude` or `ayc`:
 
@@ -31,70 +19,7 @@ ay-claude --version
 ayc --version
 ```
 
-## 📦 GitHub Packages Setup
-
-This package is published to GitHub Packages. To install or publish, you need to authenticate:
-
-### 1. Create a Personal Access Token
-
-1. Go to GitHub Settings → Developer settings → Personal access tokens → Tokens (classic)
-2. Click "Generate new token (classic)"
-3. Give it a name (e.g., "AY Claude CLI")
-4. Select scopes:
-   - ✅ `read:packages` (to install packages)
-   - ✅ `write:packages` (to publish packages)
-   - ✅ `repo` (if publishing from a private repo)
-5. Click "Generate token"
-6. **Copy the token immediately** (you won't see it again!)
-
-### 2. Authenticate with npm
-
-**Option A: Using npm login (Recommended)**
-
-```bash
-npm login --scope=@walidboulanouar --auth-type=legacy --registry=https://npm.pkg.github.com
-
-# When prompted:
-# Username: walidboulanouar (your GitHub username)
-# Password: YOUR_PERSONAL_ACCESS_TOKEN (paste your token)
-# Email: your-email@example.com
-```
-
-**Option B: Using .npmrc file**
-
-1. Create a `.npmrc` file in your home directory (`~/.npmrc`) or project directory:
-
-```bash
-# For user-wide authentication
-echo "@walidboulanouar:registry=https://npm.pkg.github.com" >> ~/.npmrc
-echo "//npm.pkg.github.com/:_authToken=YOUR_PERSONAL_ACCESS_TOKEN" >> ~/.npmrc
-```
-
-2. Replace `YOUR_PERSONAL_ACCESS_TOKEN` with your actual token.
-
-**⚠️ Important**: Never commit `.npmrc` files containing tokens to git! The `.npmrc` file is in `.gitignore`.
-
-### 3. Install the Package
-
-After authentication, install the CLI:
-
-```bash
-npm install -g @walidboulanouar/ay-claude-cli
-```
-
-### 4. Publishing (For Maintainers)
-
-To publish updates:
-
-```bash
-cd cli
-npm publish
-```
-
-The package will be published to GitHub Packages at:
-`https://github.com/walidboulanouar/ay-claude-templates/packages`
-
-For more information, see [GitHub Packages npm documentation](https://docs.github.com/packages/working-with-a-github-packages-registry/working-with-the-npm-registry).
+**Package**: [@ay-claude/cli on npm](https://www.npmjs.com/package/@ay-claude/cli)
 
 ## ✨ Features
 
@@ -319,9 +244,9 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 ## 📞 Support
 
-- **Documentation**: [GitHub Wiki](https://github.com/walidboulanouar/ay-claude-templates/wiki)
+- **Package**: [@ay-claude/cli on npm](https://www.npmjs.com/package/@ay-claude/cli)
+- **Repository**: [GitHub](https://github.com/walidboulanouar/ay-claude-templates)
 - **Issues**: [GitHub Issues](https://github.com/walidboulanouar/ay-claude-templates/issues)
-- **Package**: [GitHub Packages](https://github.com/walidboulanouar/ay-claude-templates/packages)
 - **Email**: support@ay-claude.com
 
 ---
