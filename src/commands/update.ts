@@ -34,8 +34,8 @@ export async function updateCommand(
     }
   } else {
     console.error(chalk.red('Please specify packages to update or use --all'));
-    console.log(chalk.gray('Example: claude-skills update package-name'));
-    console.log(chalk.gray('         claude-skills update --all'));
+    console.log(chalk.gray('Example: ay-claude update package-name'));
+    console.log(chalk.gray('         ay-claude update --all'));
     process.exit(1);
   }
 }

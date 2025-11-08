@@ -52,7 +52,7 @@ export async function workspaceCommand(
     
     if (config.workspaces.length === 0) {
       console.log(chalk.yellow('\nNo workspaces yet\n'));
-      console.log(chalk.gray('Create workspace: claude-skills workspace create <name>'));
+      console.log(chalk.gray('Create workspace: ay-claude workspace create <name>'));
       return;
     }
 
@@ -161,7 +161,7 @@ export async function templateCommand(
     
     if (!name) {
       console.error(chalk.red('Please specify a template ID'));
-      console.log(chalk.gray('Use "claude-skills template list" to see available templates'));
+      console.log(chalk.gray('Use "ay-claude template list" to see available templates'));
       process.exit(1);
     }
 

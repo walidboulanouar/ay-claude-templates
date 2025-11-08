@@ -36,7 +36,7 @@ export interface DownloadInfo {
 }
 
 /**
- * API client for Claude Skills Platform
+ * API client for AY Claude Platform
  */
 export class APIClient {
   private baseURL: string;

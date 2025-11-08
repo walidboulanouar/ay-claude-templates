@@ -15,12 +15,12 @@ import { detectScope, getClaudePaths, getInstallDir } from '../utils/paths.js';
 export async function installCommand(packages, options) {
     if (packages.length === 0) {
         console.error(chalk.red('Please specify at least one package to install'));
-        console.log(chalk.gray('Example: claude-skills install playwright-automation-skill'));
+        console.log(chalk.gray('Example: ay-claude install playwright-automation-skill'));
         process.exit(1);
     }
     // Initialize secure API client
     const apiUrl = process.env.SUPABASE_URL || process.env.CLAUDE_SKILLS_API_URL || 'https://your-project.supabase.co';
-    const clientId = process.env.CLAUDE_SKILLS_CLIENT_ID || 'claude-skills-cli';
+    const clientId = process.env.AY_CLAUDE_CLIENT_ID || 'ay-claude-cli';
     const apiClient = new SecureAPIClient(apiUrl, clientId);
     // Initialize audit logger
     const paths = getClaudePaths();

@@ -1,13 +1,13 @@
 import axios from 'axios';
 import chalk from 'chalk';
 import { createHash } from 'crypto';
-import { hostname, userInfo } from 'os';
-import { platform } from 'process';
 import keytar from 'keytar';
 import open from 'open';
 import ora from 'ora';
-const SERVICE_NAME = 'claude-skills-cli';
-const ACCOUNT_NAME = 'claude-skills-token';
+import { hostname, userInfo } from 'os';
+import { platform } from 'process';
+const SERVICE_NAME = 'ay-claude-cli';
+const ACCOUNT_NAME = 'ay-claude-token';
 /**
  * Secure token storage using system keychain
  */

@@ -14,24 +14,24 @@ export function helpCommand(command) {
     }
 }
 function showGeneralHelp() {
-    console.log(chalk.bold('\n📚 Claude Skills CLI - Complete Guide\n'));
+    console.log(chalk.bold('\n📚 AY Claude CLI - Complete Guide\n'));
     console.log(chalk.dim('─'.repeat(60)));
     console.log();
     console.log(chalk.bold('🔐 Authentication\n'));
-    console.log(chalk.gray('  claude-skills login              Authenticate with platform'));
-    console.log(chalk.gray('  claude-skills logout             Remove stored credentials'));
-    console.log(chalk.gray('  claude-skills whoami             Show current auth status'));
+    console.log(chalk.gray('  ay-claude login              Authenticate with platform'));
+    console.log(chalk.gray('  ay-claude logout             Remove stored credentials'));
+    console.log(chalk.gray('  ay-claude whoami             Show current auth status'));
     console.log();
     console.log(chalk.bold('🔍 Discovery\n'));
-    console.log(chalk.gray('  claude-skills search <query>     Search all content types'));
-    console.log(chalk.gray('  claude-skills browse              Browse all content'));
-    console.log(chalk.gray('  claude-skills info <name>         Get detailed information'));
+    console.log(chalk.gray('  ay-claude search <query>     Search all content types'));
+    console.log(chalk.gray('  ay-claude browse              Browse all content'));
+    console.log(chalk.gray('  ay-claude info <name>         Get detailed information'));
     console.log();
     console.log(chalk.bold('📦 Installation\n'));
-    console.log(chalk.gray('  claude-skills install <name>      Install a package'));
-    console.log(chalk.gray('  claude-skills list                List installed packages'));
-    console.log(chalk.gray('  claude-skills update              Update packages'));
-    console.log(chalk.gray('  claude-skills uninstall <name>    Remove a package'));
+    console.log(chalk.gray('  ay-claude install <name>      Install a package'));
+    console.log(chalk.gray('  ay-claude list                List installed packages'));
+    console.log(chalk.gray('  ay-claude update              Update packages'));
+    console.log(chalk.gray('  ay-claude uninstall <name>    Remove a package'));
     console.log();
     console.log(chalk.bold('📋 Content Types\n'));
     console.log(chalk.gray('  • Skills    📦  - Claude extensions with SKILL.md'));
@@ -44,24 +44,24 @@ function showGeneralHelp() {
     console.log();
     console.log(chalk.bold('💡 Examples\n'));
     console.log(chalk.green('  # Search for automation tools'));
-    console.log(chalk.gray('  claude-skills search "automation"'));
+    console.log(chalk.gray('  ay-claude search "automation"'));
     console.log();
     console.log(chalk.green('  # Install a skill'));
-    console.log(chalk.gray('  claude-skills install playwright-automation-skill'));
+    console.log(chalk.gray('  ay-claude install playwright-automation-skill'));
     console.log();
     console.log(chalk.green('  # Get detailed info'));
-    console.log(chalk.gray('  claude-skills info playwright-automation-skill'));
+    console.log(chalk.gray('  ay-claude info playwright-automation-skill'));
     console.log();
     console.log(chalk.green('  # Browse all agents'));
-    console.log(chalk.gray('  claude-skills browse --type agent'));
+    console.log(chalk.gray('  ay-claude browse --type agent'));
     console.log();
     console.log(chalk.bold('📖 Documentation\n'));
-    console.log(chalk.gray('  Visit: https://claude-skills.com/docs/cli'));
-    console.log(chalk.gray('  Run: claude-skills help <command> for command-specific help'));
+    console.log(chalk.gray('  Visit: https://ay-claude.com/docs/cli'));
+    console.log(chalk.gray('  Run: ay-claude help <command> for command-specific help'));
     console.log();
     console.log(chalk.bold('🆘 Troubleshooting\n'));
-    console.log(chalk.gray('  Run: claude-skills troubleshoot'));
-    console.log(chalk.gray('  Or visit: https://claude-skills.com/docs/cli/troubleshooting'));
+    console.log(chalk.gray('  Run: ay-claude troubleshoot'));
+    console.log(chalk.gray('  Or visit: https://ay-claude.com/docs/cli/troubleshooting'));
     console.log();
 }
 function showCommandHelp(command) {
@@ -70,7 +70,7 @@ function showCommandHelp(command) {
 ${chalk.bold('📦 Install Command')}
 
 ${chalk.cyan('Usage:')}
-  claude-skills install <package-name> [options]
+  ay-claude install <package-name> [options]
 
 ${chalk.cyan('Options:')}
   -g, --global          Install globally in ~/.claude
@@ -79,10 +79,10 @@ ${chalk.cyan('Options:')}
   --version <version>    Install specific version
 
 ${chalk.cyan('Examples:')}
-  claude-skills install playwright-automation-skill
-  claude-skills install code-review-agent --type agent
-  claude-skills install my-skill --version 1.2.0
-  claude-skills install skill-1 skill-2 --local
+  ay-claude install playwright-automation-skill
+  ay-claude install code-review-agent --type agent
+  ay-claude install my-skill --version 1.2.0
+  ay-claude install skill-1 skill-2 --local
 
 ${chalk.cyan('Content Types:')}
   skill, agent, command, hook, plugin, mcp, settings
@@ -91,7 +91,7 @@ ${chalk.cyan('Content Types:')}
 ${chalk.bold('🔍 Search Command')}
 
 ${chalk.cyan('Usage:')}
-  claude-skills search <query> [options]
+  ay-claude search <query> [options]
 
 ${chalk.cyan('Options:')}
   -t, --type <type>         Filter by content type
@@ -100,10 +100,10 @@ ${chalk.cyan('Options:')}
   --format <format>         Output format: table, list, json
 
 ${chalk.cyan('Examples:')}
-  claude-skills search "automation"
-  claude-skills search "testing" --type skill
-  claude-skills search "data" --category "Data Analysis"
-  claude-skills search "api" --format json
+  ay-claude search "automation"
+  ay-claude search "testing" --type skill
+  ay-claude search "data" --category "Data Analysis"
+  ay-claude search "api" --format json
 
 ${chalk.cyan('Tips:')}
   • Use quotes for multi-word queries
@@ -114,14 +114,14 @@ ${chalk.cyan('Tips:')}
 ${chalk.bold('ℹ️  Info Command')}
 
 ${chalk.cyan('Usage:')}
-  claude-skills info <package-name> [options]
+  ay-claude info <package-name> [options]
 
 ${chalk.cyan('Options:')}
   -t, --type <type>     Specify content type
 
 ${chalk.cyan('Examples:')}
-  claude-skills info playwright-automation-skill
-  claude-skills info code-review-agent --type agent
+  ay-claude info playwright-automation-skill
+  ay-claude info code-review-agent --type agent
 
 ${chalk.cyan('Shows:')}
   • Detailed package information
@@ -135,7 +135,7 @@ ${chalk.cyan('Shows:')}
 ${chalk.bold('📚 Browse Command')}
 
 ${chalk.cyan('Usage:')}
-  claude-skills browse [options]
+  ay-claude browse [options]
 
 ${chalk.cyan('Options:')}
   -t, --type <type>         Filter by content type
@@ -144,10 +144,10 @@ ${chalk.cyan('Options:')}
   --limit <number>          Limit results (default: 20)
 
 ${chalk.cyan('Examples:')}
-  claude-skills browse
-  claude-skills browse --type agent
-  claude-skills browse --category "Development Tools"
-  claude-skills browse --sort popular --limit 50
+  ay-claude browse
+  ay-claude browse --type agent
+  ay-claude browse --category "Development Tools"
+  ay-claude browse --sort popular --limit 50
 `,
     };
     const help = helpTexts[command];

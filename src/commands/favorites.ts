@@ -27,7 +27,7 @@ export async function favoritesCommand(
   } = {}
 ) {
   const apiUrl = process.env.SUPABASE_URL || process.env.CLAUDE_SKILLS_API_URL || 'https://your-project.supabase.co';
-  const clientId = process.env.CLAUDE_SKILLS_CLIENT_ID || 'claude-skills-cli';
+  const clientId = process.env.AY_CLAUDE_CLIENT_ID || 'ay-claude-cli';
   const apiClient = new SecureAPIClient(apiUrl, clientId);
 
   // List favorites
@@ -36,7 +36,7 @@ export async function favoritesCommand(
     
     if (favorites.length === 0) {
       console.log(chalk.yellow('\nNo favorites yet\n'));
-      console.log(chalk.gray('Add favorites: claude-skills favorite add <package-name>'));
+      console.log(chalk.gray('Add favorites: ay-claude favorite add <package-name>'));
       return;
     }
 
@@ -77,7 +77,7 @@ export async function favoritesCommand(
     
     if (collections.length === 0) {
       console.log(chalk.yellow('\nNo collections yet\n'));
-      console.log(chalk.gray('Create collection: claude-skills favorite create <name>'));
+      console.log(chalk.gray('Create collection: ay-claude favorite create <name>'));
       return;
     }
 
@@ -99,7 +99,7 @@ export async function favoritesCommand(
   if (options.add || action === 'add') {
     if (!packageId) {
       console.error(chalk.red('Please specify a package ID'));
-      console.log(chalk.gray('Example: claude-skills favorite add playwright-automation-skill'));
+      console.log(chalk.gray('Example: ay-claude favorite add playwright-automation-skill'));
       process.exit(1);
     }
 

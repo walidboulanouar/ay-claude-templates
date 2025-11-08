@@ -36,7 +36,7 @@ export async function workspaceCommand(action, workspaceId, options = {}) {
         const config = await loadWorkspaceConfig();
         if (config.workspaces.length === 0) {
             console.log(chalk.yellow('\nNo workspaces yet\n'));
-            console.log(chalk.gray('Create workspace: claude-skills workspace create <name>'));
+            console.log(chalk.gray('Create workspace: ay-claude workspace create <name>'));
             return;
         }
         console.log(chalk.bold('\n👥 Workspaces\n'));
@@ -123,7 +123,7 @@ export async function templateCommand(action, templateId, options = {}) {
         const name = options.create || templateId;
         if (!name) {
             console.error(chalk.red('Please specify a template ID'));
-            console.log(chalk.gray('Use "claude-skills template list" to see available templates'));
+            console.log(chalk.gray('Use "ay-claude template list" to see available templates'));
             process.exit(1);
         }
         const template = listTemplates().find((t) => t.id === name);

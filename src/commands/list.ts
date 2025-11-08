@@ -27,8 +27,8 @@ export async function listCommand(options: {
   if (packages.length === 0) {
     console.log(chalk.gray('\nNo packages installed\n'));
     console.log(chalk.yellow('💡 Get started:'));
-    console.log(chalk.gray('  claude-skills search "automation"'));
-    console.log(chalk.gray('  claude-skills install <package-name>\n'));
+    console.log(chalk.gray('  ay-claude search "automation"'));
+    console.log(chalk.gray('  ay-claude install <package-name>\n'));
     return;
   }
 

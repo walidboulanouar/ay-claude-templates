@@ -28,14 +28,14 @@ const program = new Command();
 // Check for updates
 checkUpdate();
 program
-    .name('claude-skills')
+    .name('ay-claude')
     .description('CLI tool for installing and managing Claude Skills, Agents, Commands, Hooks, Plugins, MCPs, and Settings')
     .version(packageJson.version || '1.0.0')
     .addHelpCommand(false); // We'll add custom help
 // Auth commands
 program
     .command('login')
-    .description('Authenticate with Claude Skills Platform')
+    .description('Authenticate with AY Claude Platform')
     .action(loginCommand);
 program
     .command('logout')
@@ -48,7 +48,7 @@ program
 // Init command
 program
     .command('init')
-    .description('Initialize Claude Skills CLI in current directory or globally')
+    .description('Initialize AY Claude CLI in current directory or globally')
     .option('-g, --global', 'Initialize globally in ~/.claude')
     .option('-l, --local', 'Initialize locally in ./.claude')
     .action(initCommand);
@@ -77,7 +77,7 @@ program
 program
     .command('search [query]')
     .alias('s')
-    .description('Search the Claude Skills marketplace across all content types')
+    .description('Search the AY Claude marketplace across all content types')
     .option('-t, --type <type>', 'Filter by content type: skill, agent, command, hook, plugin, mcp, settings')
     .option('-c, --category <category>', 'Filter by category')
     .option('--limit <number>', 'Limit results', '20')
@@ -200,7 +200,7 @@ program
 // Error handling
 program.on('command:*', () => {
     console.error(chalk.red(`Invalid command: ${program.args.join(' ')}`));
-    console.error(`See 'claude-skills --help' for available commands.`);
+    console.error(`See 'ay-claude --help' for available commands.`);
     process.exit(1);
 });
 // Parse arguments

@@ -8,7 +8,7 @@ import { existsSync } from 'fs';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 export async function troubleshootCommand() {
-    console.log(chalk.bold('\n🔧 Claude Skills CLI - Troubleshooting Guide\n'));
+    console.log(chalk.bold('\n🔧 AY Claude CLI - Troubleshooting Guide\n'));
     console.log(chalk.dim('─'.repeat(60)));
     console.log();
     // Platform information
@@ -36,12 +36,12 @@ export async function troubleshootCommand() {
         console.log(chalk.green('  ✓ Token found'));
         console.log(chalk.gray(`  Status: ${isValid ? chalk.green('Valid') : chalk.red('Expired')}`));
         if (!isValid) {
-            console.log(chalk.yellow('  → Run: claude-skills login'));
+            console.log(chalk.yellow('  → Run: ay-claude login'));
         }
     }
     else {
         console.log(chalk.red('  ✗ Not authenticated'));
-        console.log(chalk.yellow('  → Run: claude-skills login'));
+        console.log(chalk.yellow('  → Run: ay-claude login'));
     }
     console.log();
     // Check installation directories
@@ -54,7 +54,7 @@ export async function troubleshootCommand() {
     console.log(`  Global exists: ${globalExists ? chalk.green('✓') : chalk.yellow('✗')}`);
     console.log(`  Local exists:  ${localExists ? chalk.green('✓') : chalk.yellow('✗')}`);
     if (!globalExists && !localExists) {
-        console.log(chalk.yellow('  → Run: claude-skills init'));
+        console.log(chalk.yellow('  → Run: ay-claude init'));
     }
     console.log();
     // Check installed packages
@@ -74,7 +74,7 @@ export async function troubleshootCommand() {
         }
         else {
             console.log(chalk.yellow('  No packages installed'));
-            console.log(chalk.yellow('  → Run: claude-skills search "automation"'));
+            console.log(chalk.yellow('  → Run: ay-claude search "automation"'));
         }
     }
     catch (error) {
@@ -96,24 +96,24 @@ export async function troubleshootCommand() {
     // Common issues and solutions
     console.log(chalk.bold('5️⃣  Common Issues & Solutions\n'));
     console.log(chalk.cyan('  Issue: "Not authenticated"'));
-    console.log(chalk.gray('  Solution: Run claude-skills login'));
+    console.log(chalk.gray('  Solution: Run ay-claude login'));
     console.log();
     console.log(chalk.cyan('  Issue: "Package not found"'));
-    console.log(chalk.gray('  Solution: Try searching first: claude-skills search "<name>"'));
-    console.log(chalk.gray('            Or specify type: claude-skills install <name> --type skill'));
+    console.log(chalk.gray('  Solution: Try searching first: ay-claude search "<name>"'));
+    console.log(chalk.gray('            Or specify type: ay-claude install <name> --type skill'));
     console.log();
     console.log(chalk.cyan('  Issue: "Rate limit exceeded"'));
     console.log(chalk.gray('  Solution: Wait a few minutes and try again'));
-    console.log(chalk.gray('            Or check your usage: claude-skills stats'));
+    console.log(chalk.gray('            Or check your usage: ay-claude stats'));
     console.log();
     console.log(chalk.cyan('  Issue: "Package verification failed"'));
     console.log(chalk.gray('  Solution: Package may be corrupted. Try downloading again.'));
     console.log(chalk.gray('            Report issue if problem persists.'));
     console.log();
     console.log(chalk.bold('📖 More Help\n'));
-    console.log(chalk.gray('  Documentation: https://claude-skills.com/docs/cli'));
-    console.log(chalk.gray('  GitHub Issues: https://github.com/claude-skills/cli/issues'));
-    console.log(chalk.gray('  Support: support@claude-skills.com'));
+    console.log(chalk.gray('  Documentation: https://ay-claude.com/docs/cli'));
+    console.log(chalk.gray('  GitHub Issues: https://github.com/ay-claude/cli/issues'));
+    console.log(chalk.gray('  Support: support@ay-claude.com'));
     console.log();
 }
 //# sourceMappingURL=troubleshoot.js.map

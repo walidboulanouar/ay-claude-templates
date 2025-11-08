@@ -3,7 +3,7 @@ import axios from 'axios';
 const SUPABASE_URL = process.env.SUPABASE_URL || process.env.CLAUDE_SKILLS_API_URL || 'https://your-project.supabase.co';
 const API_BASE_URL = `${SUPABASE_URL}/functions/v1`;
 /**
- * API client for Claude Skills Platform
+ * API client for AY Claude Platform
  */
 export class APIClient {
     baseURL;

@@ -146,10 +146,10 @@ export function displayContentInfo(info) {
     }
     // Installation command
     console.log(chalk.bold('🚀 Installation\n'));
-    console.log(chalk.green(`  claude-skills install ${info.slug}`));
+    console.log(chalk.green(`  ay-claude install ${info.slug}`));
     if (info.type) {
         console.log(chalk.gray(`  # Or specify type:`));
-        console.log(chalk.gray(`  claude-skills install ${info.slug} --type ${info.type}`));
+        console.log(chalk.gray(`  ay-claude install ${info.slug} --type ${info.type}`));
     }
     console.log();
 }

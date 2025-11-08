@@ -6,10 +6,10 @@ import { getInstalledPackages } from '../core/registry.js';
 export async function statsCommand() {
   try {
     const apiUrl = process.env.SUPABASE_URL || process.env.CLAUDE_SKILLS_API_URL || 'https://your-project.supabase.co';
-    const clientId = process.env.CLAUDE_SKILLS_CLIENT_ID || 'claude-skills-cli';
+    const clientId = process.env.AY_CLAUDE_CLIENT_ID || 'ay-claude-cli';
     const apiClient = new SecureAPIClient(apiUrl, clientId);
 
-    console.log(chalk.bold('\n📊 Claude Skills CLI - Statistics\n'));
+    console.log(chalk.bold('\n📊 AY Claude CLI - Statistics\n'));
     console.log(chalk.dim('─'.repeat(60)));
     console.log();
 
@@ -84,9 +84,9 @@ export async function statsCommand() {
     console.log();
 
     console.log(chalk.bold('💡 Tips\n'));
-    console.log(chalk.gray('  • Use "claude-skills search" to discover new packages'));
-    console.log(chalk.gray('  • Use "claude-skills browse" to explore by category'));
-    console.log(chalk.gray('  • Use "claude-skills update" to update installed packages'));
+    console.log(chalk.gray('  • Use "ay-claude search" to discover new packages'));
+    console.log(chalk.gray('  • Use "ay-claude browse" to explore by category'));
+    console.log(chalk.gray('  • Use "ay-claude update" to update installed packages'));
     console.log();
   } catch (error) {
     console.error(chalk.red(`\n✗ Failed to get statistics: ${error instanceof Error ? error.message : String(error)}\n`));

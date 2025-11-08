@@ -10,7 +10,7 @@ import inquirer from 'inquirer';
  */
 export async function healthCommand(packageName, options = {}) {
     const apiUrl = process.env.SUPABASE_URL || process.env.CLAUDE_SKILLS_API_URL || 'https://your-project.supabase.co';
-    const clientId = process.env.CLAUDE_SKILLS_CLIENT_ID || 'claude-skills-cli';
+    const clientId = process.env.AY_CLAUDE_CLIENT_ID || 'ay-claude-cli';
     const apiClient = new SecureAPIClient(apiUrl, clientId);
     if (options.all) {
         // Show health for all installed packages
@@ -42,7 +42,7 @@ export async function healthCommand(packageName, options = {}) {
     }
     if (!packageName) {
         console.error(chalk.red('Please specify a package name'));
-        console.log(chalk.gray('Example: claude-skills health playwright-automation-skill'));
+        console.log(chalk.gray('Example: ay-claude health playwright-automation-skill'));
         process.exit(1);
     }
     // Get package info
@@ -64,11 +64,11 @@ export async function healthCommand(packageName, options = {}) {
 export async function compareCommand(packageNames) {
     if (packageNames.length < 2) {
         console.error(chalk.red('Please specify at least 2 packages to compare'));
-        console.log(chalk.gray('Example: claude-skills compare package1 package2 package3'));
+        console.log(chalk.gray('Example: ay-claude compare package1 package2 package3'));
         process.exit(1);
     }
     const apiUrl = process.env.SUPABASE_URL || process.env.CLAUDE_SKILLS_API_URL || 'https://your-project.supabase.co';
-    const clientId = process.env.CLAUDE_SKILLS_CLIENT_ID || 'claude-skills-cli';
+    const clientId = process.env.AY_CLAUDE_CLIENT_ID || 'ay-claude-cli';
     const apiClient = new SecureAPIClient(apiUrl, clientId);
     try {
         const comparison = await comparePackages(packageNames, apiClient);
@@ -84,7 +84,7 @@ export async function compareCommand(packageNames) {
  */
 export async function recommendationsCommand(options) {
     const apiUrl = process.env.SUPABASE_URL || process.env.CLAUDE_SKILLS_API_URL || 'https://your-project.supabase.co';
-    const clientId = process.env.CLAUDE_SKILLS_CLIENT_ID || 'claude-skills-cli';
+    const clientId = process.env.AY_CLAUDE_CLIENT_ID || 'ay-claude-cli';
     const apiClient = new SecureAPIClient(apiUrl, clientId);
     console.log(chalk.bold('\n🤖 Smart Recommendations\n'));
     console.log(chalk.gray('Based on your installed packages...\n'));
@@ -110,7 +110,7 @@ export async function recommendationsCommand(options) {
             console.log(chalk.gray(`   Downloads: ${rec.downloads?.toLocaleString() || 0} | Upvotes: ${rec.upvotes?.toLocaleString() || 0}`));
             console.log();
         }
-        console.log(chalk.gray('Install: claude-skills install <package-name>\n'));
+        console.log(chalk.gray('Install: ay-claude install <package-name>\n'));
     }
     catch (error) {
         console.error(chalk.red(`Failed to get recommendations: ${error instanceof Error ? error.message : String(error)}`));
@@ -156,7 +156,7 @@ export async function updatesCommand(options) {
             }
         }
         else {
-            console.log(chalk.gray('Run "claude-skills updates --install" to update packages\n'));
+            console.log(chalk.gray('Run "ay-claude updates --install" to update packages\n'));
         }
     }
     catch (error) {

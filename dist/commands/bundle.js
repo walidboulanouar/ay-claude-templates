@@ -22,14 +22,14 @@ export async function bundleCommand(action, bundleId, options = {}) {
     }
     if (!bundleId) {
         console.error(chalk.red('Please specify a bundle ID'));
-        console.log(chalk.gray('Example: claude-skills bundle install react-dev-stack'));
-        console.log(chalk.gray('Or list bundles: claude-skills bundle list'));
+        console.log(chalk.gray('Example: ay-claude bundle install react-dev-stack'));
+        console.log(chalk.gray('Or list bundles: ay-claude bundle list'));
         process.exit(1);
     }
     const bundle = getBundle(bundleId);
     if (!bundle) {
         console.error(chalk.red(`Bundle not found: ${bundleId}`));
-        console.log(chalk.gray('Use "claude-skills bundle list" to see available bundles'));
+        console.log(chalk.gray('Use "ay-claude bundle list" to see available bundles'));
         process.exit(1);
     }
     // Determine scope

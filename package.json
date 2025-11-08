@@ -1,12 +1,12 @@
 {
-  "name": "@claude-skills/cli",
+  "name": "@ay-claude/cli",
   "version": "1.0.0",
-  "description": "Official CLI for Claude Platform - Discover, install, and manage Claude Skills, Agents, Commands, Hooks, Plugins, MCPs, and Settings",
+  "description": "Official CLI for AY Claude Platform - Discover, install, and manage Claude Skills, Agents, Commands, Hooks, Plugins, MCPs, and Settings",
   "type": "module",
   "main": "./dist/index.js",
   "bin": {
-    "claude-skills": "./dist/index.js",
-    "cs": "./dist/index.js"
+    "ay-claude": "./dist/index.js",
+    "ayc": "./dist/index.js"
   },
   "preferGlobal": true,
   "engines": {
@@ -32,9 +32,9 @@
     "marketplace"
   ],
   "author": {
-    "name": "Claude Skills Platform",
-    "email": "support@claude-skills.com",
-    "url": "https://claude-skills.com"
+    "name": "AY Claude Platform",
+    "email": "support@ay-claude.com",
+    "url": "https://ay-claude.com"
   },
   "license": "MIT",
   "repository": {

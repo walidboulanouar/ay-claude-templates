@@ -27,7 +27,7 @@ export interface DownloadInfo {
     integrityHash: string;
 }
 /**
- * API client for Claude Skills Platform
+ * API client for AY Claude Platform
  */
 export declare class APIClient {
     private baseURL;

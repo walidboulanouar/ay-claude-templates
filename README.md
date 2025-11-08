@@ -1,23 +1,23 @@
-# Claude Skills CLI
+# AY Claude CLI
 
-[![npm version](https://img.shields.io/npm/v/@claude-skills/cli.svg)](https://www.npmjs.com/package/@claude-skills/cli)
-[![npm downloads](https://img.shields.io/npm/dm/@claude-skills/cli.svg)](https://www.npmjs.com/package/@claude-skills/cli)
+[![npm version](https://img.shields.io/npm/v/@ay-claude/cli.svg)](https://www.npmjs.com/package/@ay-claude/cli)
+[![npm downloads](https://img.shields.io/npm/dm/@ay-claude/cli.svg)](https://www.npmjs.com/package/@ay-claude/cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> Official CLI tool for Claude Platform - Discover, install, and manage Claude Skills, Agents, Commands, Hooks, Plugins, MCPs, and Settings
+> Official CLI tool for AY Claude Platform - Discover, install, and manage Claude Skills, Agents, Commands, Hooks, Plugins, MCPs, and Settings
 
 ## 🚀 Installation
 
 ```bash
-npm install -g @claude-skills/cli
+npm install -g @ay-claude/cli
 ```
 
-After installation, the CLI will be available as `claude-skills` or `cs`:
+After installation, the CLI will be available as `ay-claude` or `cs`:
 
 ```bash
-claude-skills --version
+ay-claude --version
 # or
-cs --version
+ayc --version
 ```
 
 ## ✨ Features
@@ -60,7 +60,7 @@ cs --version
 ### 1. Authenticate
 
 ```bash
-claude-skills login
+ay-claude login
 ```
 
 This will open your browser for authentication. Follow the instructions.
@@ -69,73 +69,73 @@ This will open your browser for authentication. Follow the instructions.
 
 ```bash
 # Search across all types
-claude-skills search "automation"
+ay-claude search "automation"
 
 # Filter by type
-claude-skills search "react" --type skill
+ay-claude search "react" --type skill
 
 # Browse by category
-claude-skills browse --category "development"
+ay-claude browse --category "development"
 ```
 
 ### 3. Install Packages
 
 ```bash
 # Install a package
-claude-skills install package-name
+ay-claude install package-name
 
 # Install with dependencies
-claude-skills install package-name
+ay-claude install package-name
 
 # Install a bundle
-claude-skills bundle install react-dev-stack
+ay-claude bundle install react-dev-stack
 
 # Install globally
-claude-skills install package-name --global
+ay-claude install package-name --global
 
 # Install locally (project-specific)
-claude-skills install package-name --local
+ay-claude install package-name --local
 ```
 
 ### 4. Manage Packages
 
 ```bash
 # List installed packages
-claude-skills list
+ay-claude list
 
 # Check package health
-claude-skills health package-name
+ay-claude health package-name
 
 # Compare packages
-claude-skills compare package1 package2 package3
+ay-claude compare package1 package2 package3
 
 # Update packages
-claude-skills updates --install
+ay-claude updates --install
 
 # Uninstall
-claude-skills uninstall package-name
+ay-claude uninstall package-name
 ```
 
 ### 5. Organize
 
 ```bash
 # Add to favorites
-claude-skills favorite add package-name
+ay-claude favorite add package-name
 
 # Create collection
-claude-skills favorite create "My Tools"
+ay-claude favorite create "My Tools"
 
 # Get recommendations
-claude-skills recommendations
+ay-claude recommendations
 
 # View search history
-claude-skills search-history
+ay-claude search-history
 ```
 
 ## 📚 Commands
 
 ### Authentication
-- `login` - Authenticate with Claude Platform
+- `login` - Authenticate with AY Claude Platform
 - `logout` - Log out and remove credentials
 - `whoami` - Show authentication status
 
@@ -173,10 +173,10 @@ Install curated collections of packages:
 
 ```bash
 # List available bundles
-claude-skills bundle list
+ay-claude bundle list
 
 # Install React development stack
-claude-skills bundle install react-dev-stack
+ay-claude bundle install react-dev-stack
 
 # Available bundles:
 # - react-dev-stack (React + TypeScript + Formatting)
@@ -191,10 +191,10 @@ Create new packages quickly:
 
 ```bash
 # List templates
-claude-skills template list
+ay-claude template list
 
 # Create from template
-claude-skills template create skill-basic
+ay-claude template create skill-basic
 ```
 
 ## 🔒 Security
@@ -237,7 +237,7 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 ## 🙏 Acknowledgments
 
-- Built for the Claude Platform
+- Built for the AY Claude Platform
 - Integrates with Claude Code
 - Inspired by npm, pip, and other great package managers
 
@@ -245,7 +245,7 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 - **Documentation**: [GitHub Wiki](https://github.com/walidboulanouar/ay-claude-templates/wiki)
 - **Issues**: [GitHub Issues](https://github.com/walidboulanouar/ay-claude-templates/issues)
-- **Email**: support@claude-skills.com
+- **Email**: support@ay-claude.com
 
 ---
 

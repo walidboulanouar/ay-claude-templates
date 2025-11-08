@@ -63,7 +63,7 @@ export const PACKAGE_TEMPLATES: PackageTemplate[] = [
 ## Installation
 
 \`\`\`bash
-claude-skills install {{name}}
+ay-claude install {{name}}
 \`\`\`
 
 ## Usage
@@ -103,7 +103,7 @@ echo "Hook executed: {{name}}"
 ## Installation
 
 \`\`\`bash
-claude-skills install {{name}}
+ay-claude install {{name}}
 \`\`\`
 
 ## Configuration
@@ -170,7 +170,7 @@ Add to \`.claude/settings.json\`:
 ## Installation
 
 \`\`\`bash
-claude-skills install {{name}} --type settings
+ay-claude install {{name}} --type settings
 \`\`\`
 
 ## Features

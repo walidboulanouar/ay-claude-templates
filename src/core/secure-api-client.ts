@@ -85,7 +85,7 @@ export class SecureAPIClient {
       baseURL: apiUrl,
       timeout: 30000,
       headers: {
-        'User-Agent': 'claude-skills-cli/1.0.0',
+        'User-Agent': 'ay-claude-cli/1.0.0',
       },
     });
 
@@ -95,7 +95,7 @@ export class SecureAPIClient {
         // Get authenticated token
         const token = await this.auth.getAuthenticatedToken();
         if (!token) {
-          throw new Error('Not authenticated. Run "claude-skills login" first.');
+          throw new Error('Not authenticated. Run "ay-claude login" first.');
         }
 
         // Add authorization header
@@ -135,10 +135,10 @@ export class SecureAPIClient {
                 // Retry request
                 return this.axiosInstance.request(error.config!);
               } catch (refreshError: unknown) {
-                throw new Error('Authentication expired. Please run "claude-skills login" again.');
+                throw new Error('Authentication expired. Please run "ay-claude login" again.');
               }
             } else {
-              throw new Error('Authentication expired. Please run "claude-skills login" again.');
+              throw new Error('Authentication expired. Please run "ay-claude login" again.');
             }
           }
 

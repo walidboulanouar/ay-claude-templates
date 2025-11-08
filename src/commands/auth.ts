@@ -6,7 +6,7 @@ import { getClaudePaths } from '../utils/paths.js';
 
 export async function loginCommand() {
   const apiUrl = process.env.SUPABASE_URL || process.env.CLAUDE_SKILLS_API_URL || 'https://your-project.supabase.co';
-  const clientId = process.env.CLAUDE_SKILLS_CLIENT_ID || 'claude-skills-cli';
+  const clientId = process.env.AY_CLAUDE_CLIENT_ID || 'ay-claude-cli';
 
   const client = new SecureAPIClient(apiUrl, clientId);
 
@@ -22,7 +22,7 @@ export async function loginCommand() {
 
 export async function logoutCommand() {
   const apiUrl = process.env.SUPABASE_URL || process.env.CLAUDE_SKILLS_API_URL || 'https://your-project.supabase.co';
-  const clientId = process.env.CLAUDE_SKILLS_CLIENT_ID || 'claude-skills-cli';
+  const clientId = process.env.AY_CLAUDE_CLIENT_ID || 'ay-claude-cli';
 
   const client = new SecureAPIClient(apiUrl, clientId);
   await client.authentication.logout();
@@ -32,7 +32,7 @@ export async function whoamiCommand() {
   const token = await SecureTokenStorage.getToken();
   
   if (!token) {
-    console.log(chalk.yellow('Not authenticated. Run "claude-skills login" first.'));
+    console.log(chalk.yellow('Not authenticated. Run "ay-claude login" first.'));
     return;
   }
 

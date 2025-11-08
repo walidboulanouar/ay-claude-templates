@@ -7,8 +7,8 @@ import ora from 'ora';
 import { hostname, userInfo } from 'os';
 import { platform } from 'process';
 
-const SERVICE_NAME = 'claude-skills-cli';
-const ACCOUNT_NAME = 'claude-skills-token';
+const SERVICE_NAME = 'ay-claude-cli';
+const ACCOUNT_NAME = 'ay-claude-token';
 
 export interface CLIToken {
   accessToken: string;

@@ -4,7 +4,7 @@ import { displayContentInfo, getDetailedInfo } from '../utils/content-info.js';
 export async function infoCommand(packageName, options) {
     try {
         const apiUrl = process.env.SUPABASE_URL || process.env.CLAUDE_SKILLS_API_URL || 'https://your-project.supabase.co';
-        const clientId = process.env.CLAUDE_SKILLS_CLIENT_ID || 'claude-skills-cli';
+        const clientId = process.env.AY_CLAUDE_CLIENT_ID || 'ay-claude-cli';
         const apiClient = new SecureAPIClient(apiUrl, clientId);
         // Get detailed information
         const info = await getDetailedInfo(apiClient, packageName, options.type);
@@ -16,8 +16,8 @@ export async function infoCommand(packageName, options) {
         // Provide helpful suggestions
         console.log(chalk.yellow('💡 Suggestions:'));
         console.log(chalk.gray('  • Check if the package name is correct'));
-        console.log(chalk.gray('  • Try searching: claude-skills search "' + packageName + '"'));
-        console.log(chalk.gray('  • Specify type: claude-skills info ' + packageName + ' --type skill'));
+        console.log(chalk.gray('  • Try searching: ay-claude search "' + packageName + '"'));
+        console.log(chalk.gray('  • Specify type: ay-claude info ' + packageName + ' --type skill'));
         console.log();
         process.exit(1);
     }

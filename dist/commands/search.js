@@ -5,13 +5,13 @@ import { recordSearch, getSearchSuggestions } from '../core/search-history.js';
 export async function searchCommand(query, options) {
     if (!query) {
         console.error(chalk.red('Please provide a search query'));
-        console.log(chalk.gray('Example: claude-skills search "automation"'));
-        console.log(chalk.gray('         claude-skills search "testing" --type skill'));
+        console.log(chalk.gray('Example: ay-claude search "automation"'));
+        console.log(chalk.gray('         ay-claude search "testing" --type skill'));
         process.exit(1);
     }
     try {
         const apiUrl = process.env.SUPABASE_URL || process.env.CLAUDE_SKILLS_API_URL || 'https://your-project.supabase.co';
-        const clientId = process.env.CLAUDE_SKILLS_CLIENT_ID || 'claude-skills-cli';
+        const clientId = process.env.AY_CLAUDE_CLIENT_ID || 'ay-claude-cli';
         const apiClient = new SecureAPIClient(apiUrl, clientId);
         const limit = parseInt(options.limit || '20', 10);
         const response = await apiClient.client.get('/functions/v1/search', {
@@ -44,7 +44,7 @@ export async function searchCommand(query, options) {
                 console.log(chalk.gray('💡 Suggestions:'));
                 console.log(chalk.gray('  • Try different keywords'));
                 console.log(chalk.gray('  • Check spelling'));
-                console.log(chalk.gray('  • Browse by category: claude-skills browse'));
+                console.log(chalk.gray('  • Browse by category: ay-claude browse'));
             }
             return;
         }
@@ -107,8 +107,8 @@ export async function searchCommand(query, options) {
                 console.log();
             });
         }
-        console.log(chalk.gray(`\n💡 Use 'claude-skills info <name>' for detailed information`));
-        console.log(chalk.gray(`💡 Use 'claude-skills install <name>' to install a package\n`));
+        console.log(chalk.gray(`\n💡 Use 'ay-claude info <name>' for detailed information`));
+        console.log(chalk.gray(`💡 Use 'ay-claude install <name>' to install a package\n`));
     }
     catch (error) {
         console.error(chalk.red(`\n✗ Search failed: ${error instanceof Error ? error.message : String(error)}\n`));

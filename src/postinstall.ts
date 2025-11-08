@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Post-install script for Claude Skills CLI
+ * Post-install script for AY Claude CLI
  * Configures PATH and verifies installation
  */
 
@@ -60,12 +60,12 @@ function addToPath(binDir: string): void {
     if (existsSync(zshrc)) {
       const content = readFileSync(zshrc, 'utf-8');
       if (!content.includes(binDir)) {
-        writeFileSync(zshrc, `${content}\n# Claude Skills CLI\n${exportLine}\n`, { flag: 'a' });
+        writeFileSync(zshrc, `${content}\n# AY Claude CLI\n${exportLine}\n`, { flag: 'a' });
         console.log(`\n✅ Added to ~/.zshrc`);
         console.log(`   Run: source ~/.zshrc`);
       }
     } else {
-      writeFileSync(zshrc, `# Claude Skills CLI\n${exportLine}\n`);
+      writeFileSync(zshrc, `# AY Claude CLI\n${exportLine}\n`);
       console.log(`\n✅ Created ~/.zshrc with PATH`);
     }
   } else if (shell.includes('bash')) {
@@ -76,12 +76,12 @@ function addToPath(binDir: string): void {
     if (existsSync(bashrc)) {
       const content = readFileSync(bashrc, 'utf-8');
       if (!content.includes(binDir)) {
-        writeFileSync(bashrc, `${content}\n# Claude Skills CLI\n${exportLine}\n`, { flag: 'a' });
+        writeFileSync(bashrc, `${content}\n# AY Claude CLI\n${exportLine}\n`, { flag: 'a' });
         console.log(`\n✅ Added to ~/.bashrc`);
         console.log(`   Run: source ~/.bashrc`);
       }
     } else {
-      writeFileSync(bashrc, `# Claude Skills CLI\n${exportLine}\n`);
+      writeFileSync(bashrc, `# AY Claude CLI\n${exportLine}\n`);
       console.log(`\n✅ Created ~/.bashrc with PATH`);
     }
   } else {
@@ -95,7 +95,7 @@ function addToPath(binDir: string): void {
  * Main post-install logic
  */
 function main() {
-  console.log('\n🚀 Claude Skills CLI - Post-Install Setup\n');
+  console.log('\n🚀 AY Claude CLI - Post-Install Setup\n');
 
   // Get bin directory
   const binDir = getNpmGlobalBin();
@@ -132,9 +132,9 @@ function main() {
   console.log('\n✨ Installation complete!');
   console.log('\n📚 Next steps:');
   console.log('   1. Restart your terminal');
-  console.log('   2. Run: claude-skills login');
-  console.log('   3. Run: claude-skills search "automation"');
-  console.log('\n💡 For help: claude-skills help\n');
+  console.log('   2. Run: ay-claude login');
+  console.log('   3. Run: ay-claude search "automation"');
+  console.log('\n💡 For help: ay-claude help\n');
 }
 
 // Run post-install
