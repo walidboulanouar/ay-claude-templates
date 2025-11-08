@@ -13,7 +13,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "build": "tsc && chmod +x dist/index.js && cp dist/postinstall.js dist/",
+    "build": "tsc && chmod +x dist/index.js",
     "dev": "tsx src/index.ts",
     "test": "vitest run",
     "prepublishOnly": "npm run build",
