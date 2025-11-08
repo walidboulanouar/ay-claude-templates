@@ -2,7 +2,7 @@
 
 ## 🎯 Overview
 
-The Claude Skills CLI is **fully integrated with Claude Code**, using Claude Code's native configuration system and directory structure. This ensures seamless compatibility and automatic registration of installed content.
+The AY Claude CLI is **fully integrated with Claude Code**, using Claude Code's native configuration system and directory structure. This ensures seamless compatibility and automatic registration of installed content.
 
 ## 📁 Directory Structure
 
@@ -65,7 +65,7 @@ All paths use Claude Code's conventions:
 
 ### Skills
 ```bash
-claude-skills install playwright-automation-skill
+ay-claude install playwright-automation-skill
 ```
 
 **Installed to**: `~/.claude/skills/playwright-automation/` or `./.claude/skills/playwright-automation/`
@@ -76,7 +76,7 @@ claude-skills install playwright-automation-skill
 
 ### Agents
 ```bash
-claude-skills install code-review-agent --type agent
+ay-claude install code-review-agent --type agent
 ```
 
 **Installed to**: `~/.claude/agents/code-review-agent/` or `./.claude/agents/code-review-agent/`
@@ -87,7 +87,7 @@ claude-skills install code-review-agent --type agent
 
 ### Commands
 ```bash
-claude-skills install git-commit-command --type command
+ay-claude install git-commit-command --type command
 ```
 
 **Installed to**: `~/.claude/commands/git-commit-command/` or `./.claude/commands/git-commit-command/`
@@ -98,7 +98,7 @@ claude-skills install git-commit-command --type command
 
 ### Hooks
 ```bash
-claude-skills install format-on-save-hook --type hook
+ay-claude install format-on-save-hook --type hook
 ```
 
 **Installed to**: `~/.claude/hooks/format-on-save-hook/` or `./.claude/hooks/format-on-save-hook/`
@@ -109,7 +109,7 @@ claude-skills install format-on-save-hook --type hook
 
 ### Plugins
 ```bash
-claude-skills install prettier-plugin --type plugin
+ay-claude install prettier-plugin --type plugin
 ```
 
 **Installed to**: `~/.claude/plugins/prettier-plugin/` or `./.claude/plugins/prettier-plugin/`
@@ -120,7 +120,7 @@ claude-skills install prettier-plugin --type plugin
 
 ### Settings Presets
 ```bash
-claude-skills install react-dev-settings --type settings
+ay-claude install react-dev-settings --type settings
 ```
 
 **Installed to**: `~/.claude/settings/react-dev-settings/` or `./.claude/settings/react-dev-settings/`
@@ -137,7 +137,7 @@ claude-skills install react-dev-settings --type settings
 When installed globally via npm:
 
 ```bash
-npm install -g @claude-skills/cli
+npm install -g @ay-claude/cli
 ```
 
 The CLI automatically:
@@ -173,12 +173,12 @@ source ~/.zshrc  # or source ~/.bashrc
 
 ```bash
 # Check if CLI is in PATH
-which claude-skills  # macOS/Linux
-where claude-skills  # Windows
+which ay-claude  # macOS/Linux
+where ay-claude  # Windows
 
 # Test CLI
-claude-skills --version
-claude-skills help
+ay-claude --version
+ay-claude help
 ```
 
 ## 🔍 How Claude Code Uses Installed Content
@@ -238,25 +238,25 @@ Plugins are loaded from:
 
 ### 1. Install CLI Globally
 ```bash
-npm install -g @claude-skills/cli
+npm install -g @ay-claude/cli
 # PATH automatically configured
 ```
 
 ### 2. Authenticate
 ```bash
-claude-skills login
+ay-claude login
 ```
 
 ### 3. Install Content
 ```bash
 # Install a skill globally
-claude-skills install playwright-automation-skill --global
+ay-claude install playwright-automation-skill --global
 
 # Install a hook locally
-claude-skills install format-on-save-hook --local
+ay-claude install format-on-save-hook --local
 
 # Install a settings preset
-claude-skills install react-dev-settings --type settings
+ay-claude install react-dev-settings --type settings
 ```
 
 ### 4. Use in Claude Code
@@ -284,7 +284,7 @@ cat ~/.claude/settings.json
 
 1. **Check installation location**:
    ```bash
-   claude-skills list
+   ay-claude list
    ```
 
 2. **Verify settings.json**:
