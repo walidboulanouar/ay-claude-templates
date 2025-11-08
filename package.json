@@ -1,5 +1,5 @@
 {
-  "name": "@ay-claude/cli",
+  "name": "@walidboulanouar/ay-claude-cli",
   "version": "1.0.0",
   "description": "Official CLI for AY Claude Platform - Discover, install, and manage Claude Skills, Agents, Commands, Hooks, Plugins, MCPs, and Settings",
   "type": "module",
