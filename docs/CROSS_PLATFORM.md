@@ -1,6 +1,6 @@
 # Cross-Platform Compatibility Guide
 
-The Claude Skills CLI is designed to work seamlessly on **Windows**, **Linux**, and **macOS**. This document outlines platform-specific considerations and ensures consistent behavior across all operating systems.
+The AY Claude CLI is designed to work seamlessly on **Windows**, **Linux**, and **macOS**. This document outlines platform-specific considerations and ensures consistent behavior across all operating systems.
 
 ## ✅ Supported Platforms
 
@@ -185,7 +185,7 @@ New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" `
 
 Check your platform:
 ```bash
-claude-skills troubleshoot
+ay-claude troubleshoot
 ```
 
 This will show:
@@ -214,10 +214,10 @@ All CLI commands work identically across platforms:
 
 ```bash
 # These work the same on Windows, Linux, and macOS
-claude-skills search "automation"
-claude-skills install package-name
-claude-skills list
-claude-skills info package-name
+ay-claude search "automation"
+ay-claude install package-name
+ay-claude list
+ay-claude info package-name
 ```
 
 ### Command Differences
@@ -244,12 +244,12 @@ Before reporting platform-specific issues, verify:
 
 If you encounter platform-specific issues:
 
-1. Run `claude-skills troubleshoot` for diagnostics
+1. Run `ay-claude troubleshoot` for diagnostics
 2. Check platform-specific sections above
 3. Review error messages for platform hints
 4. Open an issue with platform information
 
 ---
 
-**Last Updated:** 2024-11-03  
+**Last Updated:** 2024-11-08  
 **CLI Version:** 1.0.0

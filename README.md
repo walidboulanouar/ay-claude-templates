@@ -217,10 +217,12 @@ Works seamlessly on:
 
 ## 📖 Documentation
 
-- [Full Documentation](./DEVELOPER_DOCUMENTATION.md)
-- [Architecture](./ARCHITECTURE.md)
-- [Security Plan](./SECURITY_PLAN.md)
-- [Claude Code Integration](./CLAUDE_CODE_INTEGRATION.md)
+- [Full Documentation](./docs/DEVELOPER_DOCUMENTATION.md)
+- [Architecture](./docs/ARCHITECTURE.md)
+- [Security Plan](./docs/SECURITY_PLAN.md)
+- [Claude Code Integration](./docs/CLAUDE_CODE_INTEGRATION.md)
+- [Cross-Platform Guide](./docs/CROSS_PLATFORM.md)
+- [Features](./docs/FEATURES.md)
 
 ## 🤝 Contributing
 
