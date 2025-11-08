@@ -12,7 +12,7 @@
 npm install -g @ay-claude/cli
 ```
 
-After installation, the CLI will be available as `ay-claude` or `cs`:
+After installation, the CLI will be available as `ay-claude` or `ayc`:
 
 ```bash
 ay-claude --version
