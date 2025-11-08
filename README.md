@@ -251,8 +251,6 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 **Made with ❤️ for the Claude community**
 
-After installation, the CLI will be available as `claude-skills` or `cs`:
-
 ```bash
 claude-skills --version
 # or
