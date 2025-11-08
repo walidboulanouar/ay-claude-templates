@@ -39,12 +39,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/claude-skills-cli.git"
+    "url": "https://github.com/walidboulanouar/ay-claude-templates.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/claude-skills-cli/issues"
+    "url": "https://github.com/walidboulanouar/ay-claude-templates/issues"
   },
-  "homepage": "https://github.com/YOUR_USERNAME/claude-skills-cli#readme",
+  "homepage": "https://github.com/walidboulanouar/ay-claude-templates#readme",
   "files": [
     "dist/**/*",
     "README.md",
