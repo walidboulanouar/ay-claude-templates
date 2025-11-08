@@ -7,19 +7,21 @@
 
 ## 🚀 Installation
 
-### From GitHub Packages (Recommended)
+### From npmjs.org (Public npm Registry)
+
+```bash
+npm install -g @ay-claude/cli
+```
+
+**Note**: The package name on npmjs.org is `@ay-claude/cli`. If this package doesn't exist yet, see [Publishing Guide](./NPMJS_PUBLICATION_GUIDE.md).
+
+### From GitHub Packages
 
 ```bash
 npm install -g @walidboulanouar/ay-claude-cli
 ```
 
 **Note**: You'll need to authenticate with GitHub Packages first. See [GitHub Packages Setup](#github-packages-setup) below.
-
-### From npm (Coming Soon)
-
-```bash
-npm install -g @ay-claude/cli
-```
 
 After installation, the CLI will be available as `ay-claude` or `ayc`:
 
