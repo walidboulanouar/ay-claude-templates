@@ -28,6 +28,9 @@ yarn-error.log*
 .env.local
 .env.*.local
 
+# npmrc (contains credentials - NEVER commit!)
+.npmrc
+
 # Test coverage
 coverage/
 .nyc_output/

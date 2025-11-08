@@ -1,0 +1,10 @@
+# .npmrc for GitHub Packages
+# This file should NOT be committed to git (it's in .gitignore)
+# Each developer should create their own .npmrc file locally
+
+# Replace walidboulanouar with your GitHub username/organization
+@walidboulanouar:registry=https://npm.pkg.github.com
+
+# Authentication token (create a Personal Access Token with 'write:packages' scope)
+# Add this line manually after creating your token:
+# //npm.pkg.github.com/:_authToken=YOUR_PERSONAL_ACCESS_TOKEN

@@ -8,6 +8,16 @@
 
 ## 🚀 Installation
 
+### From GitHub Packages (Recommended)
+
+```bash
+npm install -g @walidboulanouar/ay-claude-cli
+```
+
+**Note**: You'll need to authenticate with GitHub Packages first. See [GitHub Packages Setup](#github-packages-setup) below.
+
+### From npm (Coming Soon)
+
 ```bash
 npm install -g @ay-claude/cli
 ```
@@ -19,6 +29,71 @@ ay-claude --version
 # or
 ayc --version
 ```
+
+## 📦 GitHub Packages Setup
+
+This package is published to GitHub Packages. To install or publish, you need to authenticate:
+
+### 1. Create a Personal Access Token
+
+1. Go to GitHub Settings → Developer settings → Personal access tokens → Tokens (classic)
+2. Click "Generate new token (classic)"
+3. Give it a name (e.g., "AY Claude CLI")
+4. Select scopes:
+   - ✅ `read:packages` (to install packages)
+   - ✅ `write:packages` (to publish packages)
+   - ✅ `repo` (if publishing from a private repo)
+5. Click "Generate token"
+6. **Copy the token immediately** (you won't see it again!)
+
+### 2. Authenticate with npm
+
+**Option A: Using npm login (Recommended)**
+
+```bash
+npm login --scope=@walidboulanouar --auth-type=legacy --registry=https://npm.pkg.github.com
+
+# When prompted:
+# Username: walidboulanouar (your GitHub username)
+# Password: YOUR_PERSONAL_ACCESS_TOKEN (paste your token)
+# Email: your-email@example.com
+```
+
+**Option B: Using .npmrc file**
+
+1. Create a `.npmrc` file in your home directory (`~/.npmrc`) or project directory:
+
+```bash
+# For user-wide authentication
+echo "@walidboulanouar:registry=https://npm.pkg.github.com" >> ~/.npmrc
+echo "//npm.pkg.github.com/:_authToken=YOUR_PERSONAL_ACCESS_TOKEN" >> ~/.npmrc
+```
+
+2. Replace `YOUR_PERSONAL_ACCESS_TOKEN` with your actual token.
+
+**⚠️ Important**: Never commit `.npmrc` files containing tokens to git! The `.npmrc` file is in `.gitignore`.
+
+### 3. Install the Package
+
+After authentication, install the CLI:
+
+```bash
+npm install -g @walidboulanouar/ay-claude-cli
+```
+
+### 4. Publishing (For Maintainers)
+
+To publish updates:
+
+```bash
+cd cli
+npm publish
+```
+
+The package will be published to GitHub Packages at:
+`https://github.com/walidboulanouar/ay-claude-templates/packages`
+
+For more information, see [GitHub Packages npm documentation](https://docs.github.com/packages/working-with-a-github-packages-registry/working-with-the-npm-registry).
 
 ## ✨ Features
 
@@ -245,6 +320,7 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 - **Documentation**: [GitHub Wiki](https://github.com/walidboulanouar/ay-claude-templates/wiki)
 - **Issues**: [GitHub Issues](https://github.com/walidboulanouar/ay-claude-templates/issues)
+- **Package**: [GitHub Packages](https://github.com/walidboulanouar/ay-claude-templates/packages)
 - **Email**: support@ay-claude.com
 
 ---
