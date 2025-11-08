@@ -1,0 +1,79 @@
+{
+  "name": "@claude-skills/cli",
+  "version": "1.0.0",
+  "description": "Official CLI for Claude Skills Platform - install and manage Skills, Agents, Commands, Hooks, and Plugins",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "claude-skills": "./dist/index.js",
+    "cs": "./dist/index.js"
+  },
+  "preferGlobal": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js && cp dist/postinstall.js dist/",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build",
+    "postinstall": "node dist/postinstall.js"
+  },
+  "keywords": [
+    "claude",
+    "ai",
+    "cli",
+    "skills",
+    "mcp",
+    "anthropic",
+    "claude-code",
+    "package-manager",
+    "extensions",
+    "marketplace"
+  ],
+  "author": {
+    "name": "Claude Skills Platform",
+    "email": "support@claude-skills.com",
+    "url": "https://claude-skills.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/claude-skills-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/claude-skills-cli/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/claude-skills-cli#readme",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^5.3.0",
+    "cli-table3": "^0.6.5",
+    "commander": "^12.0.0",
+    "conf": "^12.0.0",
+    "execa": "^8.0.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^9.2.0",
+    "jszip": "^3.10.1",
+    "keytar": "^7.9.0",
+    "open": "^10.1.0",
+    "ora": "^8.0.0",
+    "semver": "^7.6.0",
+    "update-notifier": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.0",
+    "@types/inquirer": "^9.0.9",
+    "@types/node": "^20.0.0",
+    "@types/semver": "^7.7.1",
+    "@types/update-notifier": "^6.0.8",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.2.0"
+  }
+}

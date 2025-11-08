@@ -1,0 +1,70 @@
+# Exclude files from npm package
+
+# Source files (only dist/ should be published)
+src/
+tsconfig.json
+*.ts
+!*.d.ts
+
+# Development files
+*.md
+!README.md
+!LICENSE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Test files
+test/
+tests/
+*.test.ts
+*.spec.ts
+vitest.config.ts
+
+# Build artifacts (except dist/)
+*.map
+!dist/**/*.map
+
+# Documentation (keep README.md only)
+docs/
+ARCHITECTURE.md
+DEVELOPER_DOCUMENTATION.md
+SECURITY_PLAN.md
+SECURITY_IMPLEMENTATION.md
+FEATURES.md
+*.md
+!README.md
+!LICENSE
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Temporary files
+tmp/
+temp/
+*.tmp

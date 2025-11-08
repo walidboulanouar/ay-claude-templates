@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.d.ts","sourceRoot":"","sources":["../../src/commands/bundle.ts"],"names":[],"mappings":"AAMA;;GAEG;AACH,wBAAsB,aAAa,CACjC,MAAM,EAAE,MAAM,EACd,QAAQ,EAAE,MAAM,GAAG,SAAS,EAC5B,OAAO,GAAE;IACP,MAAM,CAAC,EAAE,OAAO,CAAC;IACjB,KAAK,CAAC,EAAE,OAAO,CAAC;IAChB,IAAI,CAAC,EAAE,OAAO,CAAC;CACX,iBA8DP"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"list.d.ts","sourceRoot":"","sources":["../../src/commands/list.ts"],"names":[],"mappings":"AAiBA,wBAAsB,WAAW,CAAC,OAAO,EAAE;IACzC,MAAM,CAAC,EAAE,OAAO,CAAC;IACjB,KAAK,CAAC,EAAE,OAAO,CAAC;IAChB,IAAI,CAAC,EAAE,MAAM,CAAC;IACd,MAAM,CAAC,EAAE,OAAO,GAAG,MAAM,GAAG,MAAM,CAAC;CACpC,iBAyFA"}
