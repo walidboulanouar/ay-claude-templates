@@ -1,7 +1,6 @@
 # AY Claude CLI
 
-[![npm version](https://img.shields.io/npm/v/@ay-claude/cli.svg)](https://www.npmjs.com/package/@ay-claude/cli)
-[![npm downloads](https://img.shields.io/npm/dm/@ay-claude/cli.svg)](https://www.npmjs.com/package/@ay-claude/cli)
+[![GitHub Package](https://img.shields.io/badge/GitHub-Package-blue)](https://github.com/walidboulanouar/ay-claude-templates/packages)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > Official CLI tool for AY Claude Platform - Discover, install, and manage Claude Skills, Agents, Commands, Hooks, Plugins, MCPs, and Settings
